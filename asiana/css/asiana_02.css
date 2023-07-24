@@ -1,0 +1,455 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+
+}
+.locationBar{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .6);
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.locationBar>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.locationBar>ul>li{
+    width: 100px;
+}
+.locationBar>ul>li:first-of-type{
+    width: 50px;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.locationBar>ul>li:hover{
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+.locationBar>ul>li i{
+    font-size: 15px;
+    color: white;
+}
+.locationBar>ul>li:not(:first-of-type){
+    width: 280px;
+    border-right: 1px solid grey;
+}
+.locationBar>ul>li:not(:first-of-type) p{
+    color: white;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+.locationBar>ul>li:not(:first-of-type) p i{
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+.mainContainer{
+    width: 1250px;
+    height: 100%;
+    margin: auto;
+}
+#btnMileWrap{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+}
+#mile{
+    width: 200px;
+    height: 45px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+h4{
+    font-size: 30px;
+}
+#tabWrap1{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.multiSelectBox{
+    width: 520px;
+}
+.multiSelect{
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+}
+.multiSelect li{
+    width: 33.33%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+.multiSelect li:first-of-type{
+    background-color: rgba(255, 0, 0, .9);
+    color: white;
+}
+/* .multiSelect li:nth-of-type(2){
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+} */
+.itinery{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.itinery form input{
+    width: 33%;
+    height: 100px;
+    font-size: 30px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.itinery i{
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translateX(-100%);
+    transform: translateY(-50%);
+    color: grey;
+}  
+.afterCheck{
+    position: relative;
+}
+.menPick{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-flow: row;
+}
+.menPickInput{
+    width: 33%;
+    height: 120px;
+    position: relative;
+}
+.menPickInput label{
+    font-size: 20px;
+}
+.menPickInput input{
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    padding-left: 50%;
+    box-sizing: border-box;
+}
+.ageBtn{
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+.plusBtn{
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    left: 2%;
+}
+.minusBtn{
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    right: 2%;
+}
+.seatPick{
+    width: 100%;
+    height: 300px;
+    clear: both;
+}
+.seatPick h4{
+    margin-bottom: 10px;
+}
+.seatPick input{
+    margin-bottom: 20px;
+}
+.seatPick form button{
+    width: 300px;
+    height: 60px;
+    border: 1px solid black;
+}
+.seatPick form{
+    margin-bottom: 20px;
+}
+.seatRight{
+    float: right;
+    margin-top: 50px;
+}
+.coupBtn{
+    margin-left: 20px;
+    width: 80px;
+    height: 40px;
+    border: 1px solid grey;  
+    cursor: pointer;
+    margin-right: 10px;
+}
+.flyViewBtn{
+    width: 150px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, .8);
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+.greyBox{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.greyBox h4{
+    margin-bottom: 20px;
+}
+.greyBox ul li{
+    list-style: square;
+    margin-left: 20px;
+}
+.beforeCheck{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .8);
+    z-index: 999;
+    top: 0;
+}
+.flightInput{
+    background-color: rgba(0, 0, 0, .05);
+}
+.subMenu{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid lightgray;
+    flex-flow: column nowrap;
+    background-color: white;
+    display: none;
+    position: relative;
+}
+.sub1,
+.sub2,
+.sub3{
+    z-index: 1500;
+}
+
+.blackWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1001;
+    display: none;
+}
+#startPointPick{
+    width: 960px;
+    height: 650px;
+    background-color: ghostwhite;
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+}
+.blackWrap2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1001;
+    display: none;
+}
+#endPointPick{
+    width: 960px;
+    height: 450px;
+    background-color: ghostwhite;
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+}
+#startPointPick i,
+#endPointPick i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: ghostwhite;
+    font-size: 40px;
+    cursor: pointer;
+}
+.pointHeader{
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.pointHeader h3{
+    color: ghostwhite;
+}
+.koreaAirport{
+    width: 800px;
+    height: 205px;
+    margin: auto;
+    margin-top: 30px;
+}
+.koreaAirport table tbody{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.koreaAirport tr{
+    width: 395px;
+    box-sizing: border-box;
+}
+.koreaAirport tr td{
+    width: 395px;
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.koreaAirport tr td:hover{
+    background-color: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+.koreaAirport span{
+    font-size: 15px;
+}
+
+
+.worldAirport{
+    width: 800px;
+    height: 205px;
+    margin: auto;
+    margin-top: 30px;
+}
+.worldAirportWrap{
+    display: flex;
+    justify-content: space-between;
+}
+.worldAirportMenu{
+    width: 300px;
+    height: 220px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid black;
+}
+.worldAirportMenu li{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+}
+
+.worldAirportMenu li:hover{
+    background-color: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+/* 
+.worldAirport ul li:not(:first-child){
+    display: none;
+}
+*/
+.worldAirportList{
+    width: 495px;
+    height: 220px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.worldAirportList ul{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 495px;
+    height: 220px;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.worldAirportList ul li{
+    height: 30px;
+    width: 495px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+}
+.worldAirportList ul li:hover{
+    background-color: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+#endPointPick .worldAirport{
+    margin-top: 50px;
+}
+
+
+
+
+
+
+.activatedOne{
+    display: block !important;
+}
+
+
+.selectedOne{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+
+
+
+
+
+
+.scrollLock{
+    height: 100%;
+    overflow: hidden;
+}
